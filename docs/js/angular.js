@@ -7628,7 +7628,7 @@ function jsonFilter(){return function(object,spacing){return isUndefined(spacing
        var letterLimitInput = element(by.model('letterLimit'));
        var longNumberLimitInput = element(by.model('longNumberLimit'));
        var limitedNumbers = element(by.binding('numbers | limitTo:numLimit'));
-       var limitedLetters = element(by.binding('letters | limitTo:letterLimit'));
+       var limitedInstructor = element(by.binding('letters | limitTo:letterLimit'));
        var limitedLongNumber = element(by.binding('longNumber | limitTo:longNumberLimit'));
 
        it('should limit the number array to first three items', function() {
@@ -7636,7 +7636,7 @@ function jsonFilter(){return function(object,spacing){return isUndefined(spacing
          expect(letterLimitInput.getAttribute('value')).toBe('3');
          expect(longNumberLimitInput.getAttribute('value')).toBe('3');
          expect(limitedNumbers.getText()).toEqual('Output numbers: [1,2,3]');
-         expect(limitedLetters.getText()).toEqual('Output letters: abc');
+         expect(limitedInstructor.getText()).toEqual('Output letters: abc');
          expect(limitedLongNumber.getText()).toEqual('Output long number: 234');
        });
 
@@ -7649,7 +7649,7 @@ function jsonFilter(){return function(object,spacing){return isUndefined(spacing
        //   longNumberLimitInput.clear();
        //   longNumberLimitInput.sendKeys('-3');
        //   expect(limitedNumbers.getText()).toEqual('Output numbers: [7,8,9]');
-       //   expect(limitedLetters.getText()).toEqual('Output letters: ghi');
+       //   expect(limitedInstructor.getText()).toEqual('Output letters: ghi');
        //   expect(limitedLongNumber.getText()).toEqual('Output long number: 342');
        // });
 
@@ -7661,7 +7661,7 @@ function jsonFilter(){return function(object,spacing){return isUndefined(spacing
          longNumberLimitInput.clear();
          longNumberLimitInput.sendKeys('100');
          expect(limitedNumbers.getText()).toEqual('Output numbers: [1,2,3,4,5,6,7,8,9]');
-         expect(limitedLetters.getText()).toEqual('Output letters: abcdefghi');
+         expect(limitedInstructor.getText()).toEqual('Output letters: abcdefghi');
          expect(limitedLongNumber.getText()).toEqual('Output long number: 2345432342');
        });
      </file>

@@ -5489,9 +5489,9 @@ function hasOwnProperty(obj, prop) {
      * // => true
      *
      * var words = ['hello', 'goodbye'];
-     * var otherWords = ['hi', 'goodbye'];
+     * var otherIndividual = ['hi', 'goodbye'];
      *
-     * _.isEqual(words, otherWords, function(a, b) {
+     * _.isEqual(words, otherIndividual, function(a, b) {
      *   var reGreet = /^(?:hello|hi)$/i,
      *       aGreet = _.isString(a) && reGreet.test(a),
      *       bGreet = _.isString(b) && reGreet.test(b);
